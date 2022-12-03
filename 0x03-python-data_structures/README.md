@@ -1,4 +1,4 @@
-*** 0x03. Python - Data Structures: Lists, Tuples ***
+# 0x03. Python - Data Structures: Lists, Tuples 
 
 General
 Why Python programming is awesome
@@ -15,7 +15,7 @@ What is sequence unpacking
 What is the del statement and how to use it.
 
 
-**Requirements**
+# Requirements
 Python Scripts
 Allowed editors: vi, vim, emacs
 All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
@@ -27,7 +27,7 @@ All your files must be executable
 
 The length of your files will be tested using wc
 
-**C***
+# C
 Allowed editors: vi, vim, emacs
 All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
 All your files should end with a new line
