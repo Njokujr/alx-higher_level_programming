@@ -1,7 +1,8 @@
-**PYTHON PROGRAMMING**
+#PYTHON PROGRAMMING
 
 In this section you will learn everything you need to know about python, each lesson expands on the previous one.
 
+'''
 Getting started with python
 Installing Python3
 Running python programs
@@ -23,8 +24,8 @@ Python Operator Overloading
 Python inheritance and polymorphism
 Python Exception Handling
 Python Modules
-
-**ADVANCED PYTHON**
+'''
+#ADVANCED PYTHON
 
 After mastering basics of python move on to some advances topics.
 
@@ -38,5 +39,5 @@ What is if __name__ == "__main__" ??
 Python Lambda Function
 Python String Formatting
 
-**PYTHON BUILT-IN FUNCTIONS AND METHODS**
+#PYTHON BUILT-IN FUNCTIONS AND METHODS
 
