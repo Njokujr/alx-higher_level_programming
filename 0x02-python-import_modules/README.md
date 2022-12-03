@@ -1,6 +1,6 @@
-*** 0x02. Python - import & modules***
+# 0x02. Python - import & modules
 
-General
+#General
 Why Python programming is awesome
 How to import functions from another file
 How to use imported functions
@@ -9,7 +9,7 @@ How to use the built-in function dir()
 How to prevent code in your script from being executed when imported
 How to use command line arguments with your Python programs.
 
-Requirements
+#Requirements
 General
 Allowed editors: vi, vim, emacs
 All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
