@@ -23,20 +23,3 @@ In this section you will learn everything you need to know about python, each le
 19.Python inheritance and polymorphism
 20.Python Exception Handling
 21.Python Modules
-
-# ADVANCED PYTHON
-
-After mastering basics of python move on to some advances topics.
-
-Python args and kwargs
-Python Generators
-Python Regular Expression
-Installing packages in python using PIP
-Python virtualenv Guide
-Python recursive functions
-What is if __name__ == "__main__" ??
-Python Lambda Function
-Python String Formatting
-
-# PYTHON BUILT-IN FUNCTIONS AND METHODS
-
