@@ -2,42 +2,58 @@
 
 In this section you will learn everything you need to know about python, each lesson expands on the previous one.
 
-'''
-Getting started with python
-Installing Python3
-Running python programs
-Datatype & Variables
-Python numbers
-Python Strings
-Python Lists
-Python Dictionaries
-Python Tuples
-Datatype conversion
-Python Control Statements
-Python Functions
-Python Loops
-Python Mathematical Function
-Python Generating Random numbers
-Python File Handling
-Python Object and Classes
-Python Operator Overloading
-Python inheritance and polymorphism
-Python Exception Handling
-Python Modules
-'''
-#ADVANCED PYTHON
+1.Getting started with python
+2.Installing Python3
+3.Running python programs
+4.Datatype & Variables
+5.Python numbers
+6.Python Strings
+7.Python Lists
+8.Python Dictionaries
+9.Python Tuples
+10.Datatype conversion
+11.Python Control Statements
+12.Python Functions
+13.Python Loops
+14.Python Mathematical Function
+15.Python Generating Random numbers
+16.Python File Handling
+17.Python Object and Classes
+18.Python Operator Overloading
+19.Python inheritance and polymorphism
+20.Python Exception Handling
+21.Python Modules
 
-After mastering basics of python move on to some advances topics.
+# Requirements
+Python Scripts
+Allowed editors: vi, vim, emacs
+All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+All your files should end with a new line
+The first line of all your files should be exactly #!/usr/bin/python3
+A README.md file at the root of the repo, containing a description of the repository
+A README.md file, at the root of the folder of this project, is mandatory
+Your code should use the pycodestyle (version 2.8.*)
+All your files must be executable
+The length of your files will be tested using wc
 
-Python args and kwargs
-Python Generators
-Python Regular Expression
-Installing packages in python using PIP
-Python virtualenv Guide
-Python recursive functions
-What is if __name__ == "__main__" ??
-Python Lambda Function
-Python String Formatting
 
-#PYTHON BUILT-IN FUNCTIONS AND METHODS
+# Shell Scripts
+Allowed editors: vi, vim, emacs
+All your scripts will be tested on Ubuntu 20.04 LTS
+All your scripts should be exactly two lines long (wc -l file should print 2)
+All your files should end with a new line
+The first line of all your files should be exactly #!/bin/bash
+All your files must be executable
 
+
+# C Scripts
+Allowed editors: vi, vim, emacs
+All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+All your files should end with a new line
+Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+You are not allowed to use global variables
+No more than 5 functions per file
+In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
+The prototypes of all your functions should be included in your header file called lists.h
+Don’t forget to push your header file
+All your header files should be include guarded
