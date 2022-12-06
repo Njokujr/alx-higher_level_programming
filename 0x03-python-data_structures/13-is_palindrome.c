@@ -1,45 +1,53 @@
 #include "lists.h"
-#include <string.h>
-#include <stdio.h>
 #include <stdlib.h>
-
+#include <stdio.h>
 
 /**
-  * is_palindrome - A function that checks if a list is a palindrome.
-  * @head: The pointer to the head of the list.
-  * Return: 0 if list not a palindrome, 1 if it is.
-  */
+* is_palindrome - check is a linked list is palindrome
+* @head: head of the list
+* Return: 0 if not 1 if it is
+*/
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *tmp = *head;
-	int nodes = 0, i = 0, *array = NULL;
+	listint_t *current = *head, *prev, *next, *left_head, *right_head;
+	int list_len = 0, i = 0, not_p = 0;
 
-	if (*head == NULL || head == NULL || (*head)->next == NULL)
+	if (*head == NULL || head == NULL)
 		return (1);
-
-	while (tmp)
+	while (current != NULL)
+		list_len++, current = current->next;
+	if (list_len == 1)
+		return (1);
+	current = *head;
+	for (i = 1; i <= list_len / 2 && current != NULL; i++)
 	{
-		nodes++;
-		tmp = tmp->next;
+		next = current->next;
+		if (prev != NULL)
+			current->next = prev;
+		else
+			current->next = NULL;
+		prev = current, current = next;
 	}
-	array = malloc(sizeof(int) * nodes);
-	tmp = *head;
-
-	while (tmp)
+	right_head = current, left_head = prev;
+	for (i = 1; i <= list_len / 2 && current != NULL; i++)
 	{
-		array[i++] = tmp->n;
-		tmp = tmp->next;
-	}
-
-	for (i = 0; i < nodes / 2; i++)
-	{
-		if (array[i] != array[nodes - 1 - i])
+		if (list_len % 2 != 0 && i == 1)
+			current = current->next;
+		if (current->n != prev->n)
 		{
-			free(array);
-			return (0);
+			not_p = 1;
+			break;
 		}
+		current = current->next, prev = prev->next;
 	}
-	free(array);
-	return (1);
-}
+	current = left_head, prev = right_head;
+	for (i = 1; i <= list_len / 2 && current != NULL; i++)
+	{
+		next = current->next;
+		if (prev != NULL)
+			current->next = prev;
+		prev = current, current = next;
+	}
+	return (not_p == 1 ? 0 : 1);
+
