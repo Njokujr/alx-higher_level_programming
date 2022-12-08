@@ -50,4 +50,4 @@ int is_palindrome(listint_t **head)
 		prev = current, current = next;
 	}
 	return (not_p == 1 ? 0 : 1);
-
+}
