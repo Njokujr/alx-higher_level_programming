@@ -46,7 +46,42 @@ The length of your files will be tested using wc
 	A function that returns a key with the biggest integer value.
 
 11. Multiply by using map
-	A function that returns a list with all values multiplied by a number without using any loops.
+	A function that returns a list with all values multiplied by a number without using 
+	any loops.
 
 12. Roman to Integer
 	A function def roman_to_int(roman_string): that converts a Roman numeral to an integer.
+
+# Advanced_tasks.
+13. Weighted average!
+	a function that returns the weighted average of all integers tuple (<score>, <weight>).
+
+14. Squared by using map
+	a function that computes the square value of all integers of a matrix using map.
+
+15. Delete by value
+	a function that deletes keys with a specific value in a dictionary..
+
+16. CPython #1: PyBytesObject
+	Create two C functions that print some basic info about Python lists and Python bytes 		objects.
+	"""Python lists:
+
+#**Prototype: void print_python_list(PyObject *p);
+Format: see example
+Python bytes:
+
+#**Prototype: void print_python_bytes(PyObject *p);
+Format: see example
+Line “first X bytes”: print a maximum of 10 bytes
+If p is not a valid PyBytesObject, print an error message (see example)
+Read /usr/include/python3.4/bytesobject.h
+About:
+
+#**Python version: 3.4
+Your shared library will be compiled with this command line: gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,libPython.so -o libPython.so -fPIC -I/usr/include/python3.4 103-python.c
+You are not allowed to use the following macros/functions:
+Py_SIZE
+Py_TYPE
+PyList_GetItem
+PyBytes_AS_STRING
+PyBytes_GET_SIZE"""
