@@ -5,8 +5,6 @@ author: Victory Njoku
 """
 
 
-
-
 class Square:
     """Class Square that has attributes. Instantiation with size
     Attributes:
