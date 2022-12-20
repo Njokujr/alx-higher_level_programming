@@ -10,8 +10,8 @@ class Square:
     """Represent a square."""
 
     def __init__(self, size):
-        """Initialize a new Square.
+        """The __init__ method for Square class
         Args:
-            size (int): The size of the new square.
+            size: (:obj: 'int'): A private instance size
         """
         self.__size = size

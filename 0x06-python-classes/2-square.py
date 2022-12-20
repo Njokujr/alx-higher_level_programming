@@ -7,16 +7,23 @@ author: Victory Njoku
 
 
 class Square:
-    """Represent a square."""
-
+    """Class Square that has attributes. Instantiation with size
+    Attributes:
+        size: The size of the square
+    """
     def __init__(self, size=0):
-        """Initialize a new Square.
+        """The __init__ method for Square class
         Args:
-            size (int): The size of the new square.
+            size: (:obj: 'int', optional): A private instance size
+        Raises:
+
+            TypeError: Exception if size is not an integer
+            ValueError: Exception if size is less than 0
         """
-        if not isinstance(size, int):
+        if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        else:
+            self.__size = 
 
