@@ -6,6 +6,7 @@ author: Victory Njoku
 
 
 
+
 class Square:
     """Class Square that has attributes. Instantiation with size
     Attributes:
@@ -25,5 +26,5 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = 
+            self.__size = size
 
