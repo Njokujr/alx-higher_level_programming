@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """Define a class Square."""
+
 
 
 class Square:
