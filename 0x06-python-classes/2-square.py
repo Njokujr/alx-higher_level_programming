@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """Define a class Square."""
 
-
 class Square:
     """Represent a square."""
 
