@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Define a class Square."""
+"""
+author: Victory Njoku
+"""
+
+
 
 class Square:
     """Represent a square."""

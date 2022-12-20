@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Define a class Square."""
+# -*- coding: utf-8 -*-
+"""
+author: Victory Njoku
+"""
+
+
 
 class Square:
     """Represent a square."""
