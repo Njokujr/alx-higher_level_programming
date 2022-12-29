@@ -17,7 +17,7 @@ def matrix_divided(matrix, div):
     Return:
         The result to divide matrix by div
     """
-    if len(matrxi):
+    if len(matrix):
         n = len(matrix[0])
         for row in matrix:
             if n != len(row):
