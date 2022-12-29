@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+Author: Victory Njoku
+"""
+
+
+
+def text_indentation(text):
+    """
+    prints a string with 2 new lines after '.', '?', and ':'
+    Args:
+        text (int): text to print
+    Raises:
+        TypeError: "text must be a string"
+    """
+    if type(text) is not str:
+        raise TypeError("Text must be a string")
+    for c in text:
+        print(c, end='')
+        if c in ('.', '?', ':'):
+            print("\n")

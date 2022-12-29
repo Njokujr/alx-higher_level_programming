@@ -1,0 +1,66 @@
+========================================================================
+'Test for 5-text_indentation '
+========================================================================
+'Funtion to test:   text_indentation(text)'
+========================================================================
+
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# text is a string 
+>>> text = "victory. black: didi?"
+>>> text_indentation(text)
+victory.
+<BLANKLINE>
+black:
+<BLANKLINE>
+didi?
+<BLANKLINE>
+
+
+# text is a string with severals blankspaces
+>>> text_indentation("victory:		black:            didi?")
+victory.
+<BLANKLINE>
+black:
+<BLANKLINE>
+didi?
+<BLANKLINE>
+
+
+# text with no space
+>>> text_indentation("hello.there")
+hello.
+<BLANKLINE>
+there
+
+
+# text is an integer
+>>> text_indentation(5)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+
+# text is float
+>>> text_indentation(2.8)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+
+# text is boolean
+>>> text_indentation(False)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+
+# text is empty
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+
+

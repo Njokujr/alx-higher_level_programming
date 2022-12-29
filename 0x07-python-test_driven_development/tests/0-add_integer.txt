@@ -1,0 +1,151 @@
+========================================================================
+'Test for 0-add_integer module'
+========================================================================
+'Funtion to test:   add_integer()'
+========================================================================
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# positive integer values
+>>> add_integer(7, 3)
+10
+
+
+# a is a negative int, b is an integer
+>>> add_integer(-5, 2)
+-3
+
+
+# negative integer values
+>>> add_integer(-5, -13)
+-18
+
+
+# a = 0, b is an integer
+>>> add_integer(0, 2)
+2
+
+
+# positive floating values
+>>> add_integer(5.2, 2.0)
+7
+
+
+# a is a float, b is an integer
+>>> add_integer(1.2, 2)
+3
+
+
+# a is an integer, b is a float
+>>> add_integer(1, 2.6)
+3
+
+
+# negative floating values
+>>> add_integer(-10.2, -2.6)
+-12.8
+
+
+# a = None, b is an integer
+>>> add_integer(None, 17)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+# a = int, b = None
+>>> add_integer(17, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+
+# a = None
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+# a is a string
+>>> add_integer('book')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+# a is an integer, b is a string
+>>> add_integer(7, 'ranti')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+
+# a and b is a string 
+>>> add_integer('chika', 'aka')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+# a and b empty
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+
+# a is a bool
+>>> add_integer(False, 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+# a is a tuple
+>>> add_integer((4, 5), 7)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+# a is a list
+>>> add_integer([4, 5], 7)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+# a is a dictionary
+>>> add_integer({4, 5}, 7)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+# b is a bool
+>>> add_integer(4, False)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+# b is tuple
+>>> add_integer(5, (7, 2))
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+
+# b is a list
+>>> add_integer(1, [2, 6])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+# b is a dict
+>>> add_integer(9, {7, 6})
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+
