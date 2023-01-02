@@ -44,7 +44,7 @@ class Rectangle:
 
          Returns string '''
         return "Rectangle(" + str(self.__width) + ", " + str(self.__height) +\
-                ")"
+               ")"
 
     @property
     def height(self):
