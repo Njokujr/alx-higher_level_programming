@@ -43,8 +43,8 @@ class Rectangle:
          returns the repr method for object Rectangle
 
          Returns string '''
-        return "Rectangle(" + str(self.__width) + ", " + str(self.__height) +
-    \")"
+        return "Rectangle(" + str(self.__width) + ", " + str(self.__height) +\
+                ")"
 
     @property
     def height(self):
