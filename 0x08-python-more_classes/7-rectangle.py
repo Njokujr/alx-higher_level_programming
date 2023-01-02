@@ -104,9 +104,7 @@ class Rectangle:
 
     def area(self):
         '''
-        
         Calculate the area of the rectangle
-    
         Returns the area of the rectangle
         '''
         return self.__width * self.__height

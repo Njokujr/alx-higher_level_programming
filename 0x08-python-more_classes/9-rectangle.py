@@ -5,7 +5,6 @@ Author: Victory Njoku
 '''
 
 
-
 class Rectangle:
     """class Rectangle that defines a rectangle figure
     Attributes:

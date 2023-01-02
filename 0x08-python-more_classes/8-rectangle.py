@@ -5,7 +5,6 @@ Author: Victory Njoku
 '''
 
 
-
 class Rectangle:
     """class Rectangle that defines a rectangle figure
     Attr:
@@ -109,7 +108,6 @@ class Rectangle:
     def area(self):
         """
         Calculate the area of the rectangle
-        
         Returns: The area of the rectangle
         """
         return self.__width * self.__height

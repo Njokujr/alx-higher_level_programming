@@ -10,7 +10,6 @@ class Rectangle:
     Defines a rectangle figure
     '''
 
-
     def __init__(self, width=0, height=0):
         '''
         Initialise method for Rectangle
@@ -24,14 +23,12 @@ class Rectangle:
         self.__width = width
         self.__height = height
 
-
     @property
     def height(self):
         '''
         Returns the height of the Rectangle
         '''
         return self.__height
-
 
     @height.setter
     def height(self, value):
@@ -50,14 +47,12 @@ class Rectangle:
         else:
             self.__height = value
 
-
     @property
     def width(self):
         '''
-        Returns the width of the Rectangle 
+        Returns the width of the Rectangle
         '''
         return self.__width
-
 
     @width.setter
     def width(self, value):
@@ -77,16 +72,14 @@ class Rectangle:
         else:
             self.__width = value
 
-
     def area(self):
-         '''
+        '''
          Calculates the area of the Rectangle
 
          Returns:
             The area of the Rectangle
           '''
-         return self.__width * self.__height
-
+        return self.__width * self.__height
 
     def perimeter(self):
         '''
@@ -98,4 +91,3 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
-

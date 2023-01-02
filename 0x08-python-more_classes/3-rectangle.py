@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 '''
 Author: Victory Njoku
 '''
@@ -10,12 +10,10 @@ class Rectangle:
     Defines a RECTANGLE FIGURE
     '''
 
-
     def __init__(self, width=0, height=0):
         '''
         Initialise method for Rectangle
 
-        
         Attr:
             width-> The width of the Rectangle
             height-> The height of the Rectangle
@@ -24,7 +22,6 @@ class Rectangle:
         '''
         self.__height = height
         self.__width = width
-
 
     def __str__(self):
         '''
@@ -44,7 +41,6 @@ class Rectangle:
                 string += '\n'
         return string
 
-
     @property
     def height(self):
         '''
@@ -53,11 +49,10 @@ class Rectangle:
 
         return self.__height
 
-
     @height.setter
     def height(self, value):
         '''
-        Attr: 
+        Attr:
             height-> the height of the rectangle
 
         Raises:
@@ -72,14 +67,12 @@ class Rectangle:
         else:
             self.__height = value
 
-
     @property
     def width(self):
         '''
         Returns the width of the Rectangle
         '''
         return self.__width
-
 
     @width.setter
     def width(self, value):
@@ -100,7 +93,6 @@ class Rectangle:
         else:
             self.__width = value
 
-
     def area(self):
         '''
         Calculates the area of the Rectangle
@@ -108,7 +100,6 @@ class Rectangle:
         Returns the area of the Rectangle
         '''
         return self.__width * self.__height
-
 
     def perimeter(self):
         '''
@@ -119,4 +110,3 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
-
