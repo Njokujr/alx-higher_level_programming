@@ -5,7 +5,6 @@ Author: Victory Njoku
 """
 
 
-
 def add_integer(a, b=98):
     """ Calculate the sum of ``a`` and ``b``
     Args:
