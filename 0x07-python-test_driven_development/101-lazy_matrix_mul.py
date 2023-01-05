@@ -16,5 +16,5 @@ def lazy_matrix_mul(m_a, m_b):
     Returns:
         The result of m_a,m_b
         """
-        '''multipy 2 patrices with numpy'''
+    '''multipy 2 patrices with numpy'''
     return (np.matmul(m_a, m_b))
