@@ -3,6 +3,8 @@
 """
 Author: Victory Njoku
 """
+
+
 def matrix_divided(matrix, div):
     """
     divides all elements of a matrix
