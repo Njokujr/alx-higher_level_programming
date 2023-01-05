@@ -5,7 +5,6 @@ Author: Victory Njoku
 """
 
 
-
 def text_indentation(text):
     """
     prints a string with 2 new lines after '.', '?', and ':'
@@ -16,7 +15,6 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError("Text must be a string")
-    
     string = text.replace('.', '.\n\n').replace(':', ':\n\n')\
         .replace('?', '?\n\n')
     for i in range(len(text)):
