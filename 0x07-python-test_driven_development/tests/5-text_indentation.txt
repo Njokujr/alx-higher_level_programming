@@ -7,47 +7,40 @@
 
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-# text is a string 
->>> text = "victory.black:didi?"
->>> text_indentation(text)
-victory.
-<BLANKLINE>
-black:
-<BLANKLINE>
-didi?
-<BLANKLINE>
+Cases to be evaluated:
+
+Case #1: test argument being a number.
+>>> text_indentation(666)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+Case #2: test argument being a list.
+>>> text_indentation([This is a list])
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+Case #3: test argument being Null.
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+Case #4: test passing an empty string.
+>>> text_indentation("")
 
 
-# text with no space
->>> text_indentation("hello.there")
-hello.
-<BLANKLINE>
-there
-
-
-'text is a string with severals blankspaces'
->>> text_indentation("victory.		black:            didi?")
-victory.
-<BLANKLINE>
-black:
-<BLANKLINE>
-didi?
-<BLANKLINE>
-
-
-# text = string with no characters
->>> text_indentation("string with no characters")
-string with no characters
-
-
-# text is empty
+Case #5: test passing zero arguments.
 >>> text_indentation()
 Traceback (most recent call last):
 ...
 TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-
-# text = one match
->>> text_indentation("hello.")
-hello.
+Case #6: test the characters to insert '\n'
+>>> text_indentation(".?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
 <BLANKLINE>
