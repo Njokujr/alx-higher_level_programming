@@ -4,7 +4,7 @@
 Author: Victory Njoku
 """
 
-from numpy import matmul
+import numpy as np
 
 
 def lazy_matrix_mul(m_a, m_b):
@@ -14,6 +14,7 @@ def lazy_matrix_mul(m_a, m_b):
         m_a (list): First matrix
         m_b (list): second matrix
     Returns:
-        The result of multiply m_a by m_b
-    """
-    return matmul(m_a, m_b)
+        The result of m_a,m_b
+        """
+        '''multipy 2 patrices with numpy'''
+    return (np.matmul(m_a, m_b))
