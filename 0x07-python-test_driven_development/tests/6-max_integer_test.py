@@ -2,56 +2,59 @@
 """Unittest for max_integer([..])
 """
 import unittest
-#max_integer = __import__('6-max_integer').max_integer
-
-
-
-def max_integer(list=[]):
-    """Function to find and return the max integer in a list of integers
-        If the list is empty, the function returns None
-    """
-    if len(list) == 0:
-        return None
-    result = list[0]
-    i = 1
-    while i < len(list):
-        if list[i] > result:
-            result = list[i]
-        i += 1
-    return result
+max_integer = __import__('6-max_integer').max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
-
-     """
-    class for testing 6-max_integer_test.py
-    without arguments
+    """
+    Test cases to be evaluated.
     """
 
-def test_simple_complete_list(self):
-        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
-        self.assertEqual(max_integer([5, 2, 0, -1]), 5)
-        self.assertEqual(max_integer([5, 5, 5]), 5)
-
-def test_simple_empty_none_list(self):
-        self.assertEqual(max_integer([]), None)
-        self.assertRaises(TypeError, max_integer, None)
-
-def test_string_comparison(self):
-        self.assertRaises(TypeError, max_integer, [1, 2, 3, "Hol"])
-        self.assertRaises(TypeError, max_integer, ["H", 1, 2, 3])
-
-def test_integer_comparison_none(self):
-        self.assertRaises(TypeError, max_integer, [1, None, 2])
-
-def test_max_integer_empty(self):
+    def test_max_end(self):
+        """Test max int of a list
         """
-        test case if an empty list is passed
-        without arguments
-        """
-        test_list = []
-        self.assertEqual(max_integer(test_list), None)
+        _list = [1, 2, 3, 4]
+        self.assertEqual(max_integer(_list), 4)
 
+    def test_max_first(self):
+        """Test max int of a list at the end
+        """
+        _list = [4, 1, 2, 3]
+        self.assertEqual(max_integer(_list), 4)
+
+    def test_max_middle(self):
+        """Test max int in the middle of a list
+        """
+        _list = [1, 4, 2, 3]
+        self.assertEqual(max_integer(_list), 4)
+
+    def test_max_negative(self):
+        """Checks the max negative int of a list
+        """
+        _list = [-1, -2, -3, -4]
+        self.assertEqual(max_integer(_list), -1)
+
+    def test_float(self):
+        """Checks the max float of a list
+        """
+        _list = [1, 2, 3.3, 4.5]
+        self.assertEqual(max_integer(_list), 4.5)
+
+    def test_string(self):
+        """Checks max int(within the list a string)
+        """
+        _list = [1, 2, '3', 4]
+        with self.assertRaises(TypeError):
+            max_integer(_list)
+
+    def test_empty_list(self):
+        """Checks the case of an empty list
+        """
+        _list = []
+        self.assertEqual(max_integer(_list), None)
+
+    def test_void_arg(self):
+        self.assertEqual(max_integer(), None)
 
 if __name__ == '__main__':
     unittest.main()
