@@ -3,7 +3,6 @@
 """
 Author: Victory Njoku
 """
-
 def matrix_divided(matrix, div):
     """
     divides all elements of a matrix
@@ -23,7 +22,7 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
     for i in matrix:
-        l = []
+        k = []
         if type(i) is not list:
             raise TypeError("matrix must be a matrix\
  (list of lists) of integers/floats")
@@ -34,6 +33,6 @@ def matrix_divided(matrix, div):
             if (type(i[j]) is not int) and (type(i[j]) is not float):
                 raise TypeError("matrix must be a matrix\
 (list of lists) of integers/floats")
-            l.append(round(((i[j]) / div), 2))
-        newList.append(l)
+            k.append(round(((i[j]) / div), 2))
+        newList.append(k)
     return newList
