@@ -14,10 +14,15 @@ def text_indentation(text):
         TypeError: "text must be a string"
     """
     if type(text) is not str:
-        raise TypeError("Text must be a string")
-    string = text.replace('.', '.\n\n').replace(':', ':\n\n')\
-        .replace('?', '?\n\n')
-    for i in range(len(text)):
-        string = string.replace('\n ', '\n')
-
-    print(string, end='')
+        raise TypeError("text must be a string")
+    tmp = text.replace(".", ".\n\n")
+    tmp = tmp.replace(":", ":\n\n")
+    tmp = tmp.replace("?", "?\n\n")
+    p = tmp.splitlines(True)
+    ls_strip = []
+    for k in p:
+        if k == "\n":
+            ls_strip.append("\n")
+        else:
+            ls_strip.append(k.lstrip())
+    print("".join(ls_strip), end="")
