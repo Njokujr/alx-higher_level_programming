@@ -4,6 +4,7 @@
 Defines a text file-reading function.
 """
 
+
 def read_file(filename=""):
     """
     Reads the file
