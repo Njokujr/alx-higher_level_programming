@@ -5,6 +5,7 @@ Defines a file-appending function.
 & Returns the number of characters appended
 """
 
+
 def append_write(filename="", text=""):
     """Appends a string to the end of a UTF8 text file.
     Args:
