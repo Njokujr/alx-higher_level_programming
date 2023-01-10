@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
 """
 Add all arguments to a Python list and save them to a file.
 """
