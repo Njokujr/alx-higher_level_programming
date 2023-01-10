@@ -54,3 +54,10 @@ Do not use the words import or from inside your comments, the checker will think
 	Write a class Square that inherits from Rectangle (9-rectangle.py). (task based on 10-square.py)
 
 
+
+# ADVANCED_TASKS
+12. My integer
+	Write a class MyInt that inherits from int
+
+13. Can I?
+	Write a function that adds a new attribute to an object if it’s possible
