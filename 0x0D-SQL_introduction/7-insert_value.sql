@@ -1,2 +1,3 @@
 -- Insert to a table
-INSERT INTO `first_table` (`id`, `name`) VALUES ('89', "BEST SCHOOL");
+-- DML query to Inserts a new row in the table
+INSERT INTO first_table (id, name) VALUES (89, "BEST SCHOOL");
