@@ -45,6 +45,7 @@ Install MySQL 8.0 on Ubuntu 20.04 LTS;
 		$
 
 Connect to your MySQL server:
+
 		$ sudo mysql
 		Welcome to the MySQL monitor.  Commands end with ; or \g.
 		Your MySQL connection id is 11
