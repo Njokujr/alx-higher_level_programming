@@ -21,19 +21,21 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 # Requirements
 __General__
-        -Allowed editors: vi, vim, emacs
-        -All your files will be executed on Ubuntu 20.04 LTS using MySQL 8.0 (version 8.0.25)
-        -All your files should end with a new line
-        -All your SQL queries should have a comment just before (i.e. syntax above)
-        -All your files should start by a comment describing the task
-        -All SQL keywords should be in uppercase (SELECT, WHERE…)
-        -A README.md file, at the root of the folder of the project, is mandatory
-        -The length of your files will be tested using wc.
+
+    -Allowed editors: vi, vim, emacs
+    -All your files will be executed on Ubuntu 20.04 LTS using MySQL 8.0 (version 8.0.25)
+    -All your files should end with a new line
+    -All your SQL queries should have a comment just before (i.e. syntax above)
+    -All your files should start by a comment describing the task
+    -All SQL keywords should be in uppercase (SELECT, WHERE…)
+    -A README.md file, at the root of the folder of the project, is mandatory
+    -The length of your files will be tested using wc.
 
 
 
 # MORE INFO
-Comments for your SQL file:
+*Comments for your SQL file:
+
         $ cat my_script.sql
         -- 3 first students in the Batch ID=3
         -- because Batch 3 is the best!
@@ -49,7 +51,7 @@ Comments for your SQL file:
         mysql  Ver 8.0.25-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))
         $
 
-    Connect to your MySQL server:
+Connect to your MySQL server:
 
         $ sudo mysql
         Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -71,12 +73,12 @@ Comments for your SQL file:
 
 
 # Use “container-on-demand” to run MySQL
-    In the container, credentials are root/root
+In the container, credentials are root/root
 
-    -Ask for container Ubuntu 20.04
-    -Connect via SSH
-    -OR connect via the Web terminal
-    -In the container, you should start MySQL before playing with it:
+-Ask for container Ubuntu 20.04
+-Connect via SSH
+-OR connect via the Web terminal
+-In the container, you should start MySQL before playing with it:
 
         $ service mysql start                                                   
         * Starting MySQL database server mysqld 
