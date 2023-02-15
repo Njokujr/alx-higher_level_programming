@@ -102,5 +102,5 @@ In the container, credentials are root/root
 		$
 
 
-![.img](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/3/bc2575fee3303b731031.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230215T224209Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=3a5e8a6fe7ea43efa4560588a3e9d40d39a01185faa8b0f99ffd05313b68cd5b)
+![.img](https://user-images.githubusercontent.com/111055423/219208685-ffd500a1-1d1d-4ae3-b297-32c955bb70f4.png)
 
