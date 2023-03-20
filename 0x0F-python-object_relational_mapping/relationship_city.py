@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """contains the class definition of a City"""
-from model_state import Base
+from relationship_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 
 
 class City(Base):
@@ -14,4 +14,5 @@ class City(Base):
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
 
-    state = relationship('State', backref='cities')
+    state = relationship('State', backref=backref('cities',
+                         cascade='all, delete'))
