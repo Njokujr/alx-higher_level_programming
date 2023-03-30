@@ -3,10 +3,11 @@
 """
 
 def find_peak(list_of_integers):
-    """Finds a peak (i.e. the highest value) of an
-    unsorted list of integers"""
-
-    if list_of_integers == [] or list_of_integers is None:
+    """
+    Return the peak in a list of integers
+    """
+    if len(list_of_integers) > 0:
+        list_of_integers.sort()
+        return list_of_integers[-1]
+    else:
         return None
-    list_of_integers.sort()
-    return list_of_integers[-1]
