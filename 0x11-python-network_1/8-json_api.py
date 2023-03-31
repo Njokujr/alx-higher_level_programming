@@ -7,19 +7,18 @@ import requests
 import json
 import sys
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     url = 'http://0.0.0.0:5000/search_user'
-    if len(sys.argv) >= 2:
-        char = sys.argv[1]
+    if len(argv) > 1:
+        q = {'q': argv[1]}
     else:
-        char = ""
-
-    data = {'q': char}
-    r = requests.post(url, data=data)
+        q = {'q': ''}
+    response = post(url, data=q)
     try:
-        user = json.loads(r.text)
-        print("[{}] {}".format(user['id'], user['name']))
-    except KeyError:
-        print("No result")
-    except json.decoder.JSONDecodeError:
-        print("Not a valid JSON")
+        obj = response.json()
+        if len(obj) == 0:
+            print('No result')
+        else:
+            print('[{}] {}'.format(obj['id'], obj['name']))
+    except:
+        print('Not a valid JSON')
