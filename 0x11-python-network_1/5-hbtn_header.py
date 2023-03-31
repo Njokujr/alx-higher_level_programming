@@ -9,5 +9,5 @@ import sys
 if __name__ == '__main__':
     url = sys.argv[1:]
     r = requests.get(url)
-    res = r.header.get('X-Request-Id')
+    res = r.headers.get('X-Request-Id')
     print(res)
