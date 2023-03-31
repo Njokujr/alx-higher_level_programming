@@ -6,20 +6,24 @@ with the letter as a parameter."""
 import requests
 import sys
 
-if __name__ == '__main__':
-
-    url = 'http://0.0.0.0:5000/search_user'
-    if len(sys.argv) >= 2:
-        char = sys.argv[1]
+if __name__ == "__main__":
+    # Get the command line argument for the letter
+    if len(sys.argv) > 1:
+        q = sys.argv[1]
     else:
-        char = ""
+        q = ""
 
-    data = {'q': char}
-    r = requests.post(url, data=data)
+    # Send the POST request to the API endpoint
+    response = requests.post("http://0.0.0.0:5000/search_user", data={"q": q})
+
     try:
-        user = json.loads(r.text)
-        print("[{}] {}".format(user['id'], user['name']))
-    except KeyError:
-        print("No result")
-    except json.decoder.JSONDecodeError:
+        # Parse the response JSON
+        data = response.json()
+        if data:
+            # Print the ID and name of the user(s) found
+            print("[{}] {}".format(data["id"], data["name"]))
+        else:
+            print("No result")
+    except ValueError:
         print("Not a valid JSON")
+
