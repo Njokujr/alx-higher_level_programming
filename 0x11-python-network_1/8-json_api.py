@@ -3,6 +3,7 @@
 POST request to http://0.0.0.0:5000/search_user
 with the letter as a parameter."""
 
+import json
 from requests import post, codes
 from sys import argv
 
