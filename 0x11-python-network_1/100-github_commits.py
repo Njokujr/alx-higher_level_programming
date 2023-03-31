@@ -4,24 +4,15 @@
 import requests
 import sys
 
-# Get repository name and owner name from command line arguments
-repo_name = sys.argv[1]
-owner_name = sys.argv[2]
+api_endpoint = ("https://api.github.com/repos/{}/{}/commits"
+                .format(sys.argv[2], sys.argv[1]))
 
-# Construct URL for GitHub API
-url = f"https://api.github.com/repos/{owner_name}/{repo_name}"
+# Make a request to the GitHub API
+response = requests.get(api_endpoint)
 
-# Send GET request to GitHub API
-response = requests.get(url)
+# Get the most recent 10 commits
+commits = response.json()[:10]
 
-# Check if request was successful
-if response.status_code == 200:
-    # Get repository information from response
-    repo_info = response.json()
-    # Print repository name, description, and number of stars
-    print(f"Repository Name: {repo_info['name']}")
-    print(f"Description: {repo_info['description']}")
-    print(f"Number of Stars: {repo_info['stargazers_count']}")
-else:
-    # Print error message
-    print(f"Error: {response.status_code}")
+# Print each commit's SHA and author name
+for commit in commits:
+    print("{}: {}".format(commit['sha'], commit['commit']['author']['name']))
