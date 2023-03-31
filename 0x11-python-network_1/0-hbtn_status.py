@@ -3,9 +3,8 @@
 A Script that fetches the status of
 url: https://alx-intranet.hbtn.io/status
 """
-
 import urllib.request
-req = urllib.request.Request('https://alx-intranet.hbtn.io/status')
+req = ('https://alx-intranet.hbtn.io/status')
 with urllib.request.urlopen(req) as response:
     the_page = response.read()
 
