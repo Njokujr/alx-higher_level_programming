@@ -4,18 +4,24 @@
 import requests
 import sys
 
+# Get repository name and owner name from command line arguments
 repo_name = sys.argv[1]
 owner_name = sys.argv[2]
-response = requests.get(f"https: // api.github.com/repos
-                        / {owner_name}/{repo_name}")
 
+# Construct URL for GitHub API
+url = f"https://api.github.com/repos/{owner_name}/{repo_name}"
+
+# Send GET request to GitHub API
+response = requests.get(url)
+
+# Check if request was successful
 if response.status_code == 200:
+    # Get repository information from response
     repo_info = response.json()
-    print(f"Repository name: {repo_info['name']}")
-    print(f"Owner name: {repo_info['owner']['login']}")
+    # Print repository name, description, and number of stars
+    print(f"Repository Name: {repo_info['name']}")
     print(f"Description: {repo_info['description']}")
-    print(f"Number of stars: {repo_info['stargazers_count']}")
-    print(f"Number of forks: {repo_info['forks_count']}")
+    print(f"Number of Stars: {repo_info['stargazers_count']}")
 else:
-    print(f"Error: Could not retrieve information about
-          {owner_name}/{repo_name}")
+    # Print error message
+    print(f"Error: {response.status_code}")
