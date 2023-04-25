@@ -1,30 +1,20 @@
 #!/usr/bin/node
 const request = require('request');
+const apiURL = process.argv[2];
 
-// Get the API URL from command line argument
-const apiUrl = process.argv[2];
-
-// Send a GET request to the API
-request.get(apiUrl, (error, response, body) => {
+// make the request to the API URL
+request(apiURL, (error, response, body) => {
   if (error) {
-    console.error(error);
-  } else {
-    try {
-      const films = JSON.parse(body).results; // Extract the films array from the API response
-      let wedgeAntillesCount = 0; // Initialize count to 0
-
-      // Loop through the films and check if Wedge Antilles is present in each film
-      for (const film of films) {
-        const characters = film.characters; // Get the characters array from each film
-        if (characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
-          // Check if Wedge Antilles' character ID (18) is present in the characters array
-          wedgeAntillesCount++;
-        }
-      }
-
-      console.log('Number of movies where Wedge Antilles is present:', wedgeAntillesCount);
-    } catch (error) {
-      console.error(error);
-    }
+    console.log(error);
+    return;
   }
+
+  // parse the JSON response into an object
+  const data = JSON.parse(body);
+
+  // filter the films array to only include those where Wedge Antilles appears
+  const filmsWithWedge = data.results.filter(film => film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/'));
+
+  // print the count of films with Wedge Antilles
+  console.log(filmsWithWedge.length);
 });
