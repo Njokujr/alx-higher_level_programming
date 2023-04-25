@@ -1,14 +1,10 @@
 #!/usr/bin/node
-
 const fs = require('fs');
+const file = process.argv[2];
+const text = process.argv[3];
 
-if (process.argv.length !== 4) {
-  process.exit();
-}
-const [path, data] = process.argv.slice(2);
-
-fs.writeFile(path, data, (error) => {
+fs.writeFile(file, text, 'utf8', function (error, data) {
   if (error) {
     console.log(error);
   }
-})
+});
